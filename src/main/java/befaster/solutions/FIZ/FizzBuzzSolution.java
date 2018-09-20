@@ -36,7 +36,7 @@ public class FizzBuzzSolution {
                 fizz = fizz +  " fake deluxe";
             }
             return fizz;
-        } else if(isMod3) {
+        } else if(isMod3 || hasDigit3) {
             return "fizz";
         }
         return null;
@@ -51,7 +51,7 @@ public class FizzBuzzSolution {
                 buzz = buzz + " fake deluxe";
             }
             return buzz;
-        } else if(isMod5) {
+        } else if(isMod5 || hasDigit5) {
             return "buzz";
         }
         return null;
