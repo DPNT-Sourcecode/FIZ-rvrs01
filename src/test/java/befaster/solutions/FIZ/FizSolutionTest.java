@@ -73,4 +73,13 @@ public class FizSolutionTest {
     public void shouldWriteFakeDelux_whenNumberDivisibleByFive_andNumberGreaterThanTen_andNumberHasAllSameOddDigits() {
         assertThat(fizzBuzzSolution.fizzBuzz(333),is("fizz fake deluxe"));
     }
+
+
+    @Test
+    public void shouldReturnNumber_1000() {
+       // for(int i =0; i < 9999; i++) {
+            System.out.println("+ i % 3  = " + (13 % 3) + " i % 5 = " +(13% 5) + " "+ fizzBuzzSolution.fizzBuzz(13));
+            //  System.out.println(fizzBuzzSolution.fizzBuzz(i));
+       // }
+    }
 }
