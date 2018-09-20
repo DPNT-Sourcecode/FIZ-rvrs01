@@ -19,14 +19,14 @@ public class FizSolutionTest {
     @Test
     public void shouldWriteFizz_whenNumberDivisibleByFive() {
 
-        assertThat(fizzBuzzSolution.fizzBuzz(25),is("buzz fake deluxe"));
+        assertThat(fizzBuzzSolution.fizzBuzz(25),is("buzz deluxe"));
     }
 
 
     @Test
     public void shouldWriteFizz_whenNumberDivisibleByFiveAndThree() {
 
-        assertThat(fizzBuzzSolution.fizzBuzz(15),is("fizz buzz fake deluxe"));
+        assertThat(fizzBuzzSolution.fizzBuzz(15),is("fizz buzz deluxe"));
     }
 
     @Test
@@ -71,7 +71,7 @@ public class FizSolutionTest {
 
     @Test
     public void shouldWriteFakeDelux_whenNumberDivisibleByFive_andNumberGreaterThanTen_andNumberHasAllSameOddDigits() {
-        assertThat(fizzBuzzSolution.fizzBuzz(333),is("fizz fake deluxe"));
+        assertThat(fizzBuzzSolution.fizzBuzz(333),is("fizz deluxe"));
     }
 
 
