@@ -25,7 +25,7 @@ public class FizzBuzzSolution {
         if (number > 10 && hasAllTheSameDigits(number)) {
             return " deluxe";
         }
-        return "";
+        return number.toString();
     }
 
     private boolean hasAllTheSameDigits(Integer number) {
