@@ -17,42 +17,26 @@ public class FizzBuzzSolution {
                 return "fizz buzz fake deluxe";
             }
         }
-        String fizz1 = getDivideBy3(number, hasDigit3, isMod3);
+        String fizz1 = geKeywordDividedByDigitAndContainsDigit(number, hasDigit3, isMod3, "fizz");
         if (fizz1 != null) return fizz1;
 
-        String buzz1 = getDivideBy5(number, hasDigit5, isMod5);
+        String buzz1 = geKeywordDividedByDigitAndContainsDigit(number, hasDigit5, isMod5, "buzz");
         if (buzz1 != null) return buzz1;
 
         return number.toString();
     }
 
-    private String getDivideBy3(final Integer number, final boolean hasDigit3, final Boolean isMod3) {
-        String fizz = "fizz";
-        if(isMod3 && hasDigit3) {
+    private String geKeywordDividedByDigitAndContainsDigit(final Integer number, final boolean hasDigit, final Boolean isModNumber, String prefix) {
 
-            if(numberIsDivisibleBy(number,2)) {
-                fizz = fizz + " deluxe";
-            }else {
-                fizz = fizz +  " fake deluxe";
-            }
-            return fizz;
-        } else if(isMod3 || hasDigit3) {
-            return "fizz";
-        }
-        return null;
-    }
-
-    private String getDivideBy5(final Integer number, final boolean hasDigit5, final Boolean isMod5) {
-        String buzz = "buzz";
-        if(isMod5 && hasDigit5) {
+        if(isModNumber && hasDigit) {
             if(numberIsDivisibleBy(number,2)){
-                buzz = buzz +  "deluxe";
+                prefix = prefix +  "deluxe";
             }else {
-                buzz = buzz + " fake deluxe";
+                prefix = prefix+ " fake deluxe";
             }
-            return buzz;
-        } else if(isMod5 || hasDigit5) {
-            return "buzz";
+            return prefix;
+        } else if(isModNumber || hasDigit) {
+            return prefix;
         }
         return null;
     }
