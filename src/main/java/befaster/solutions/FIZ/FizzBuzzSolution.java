@@ -34,7 +34,6 @@ public class FizzBuzzSolution {
             }else {
                 prefix = prefix+ " fake deluxe";
             }
-            return prefix;
         } else if(isModNumber || hasDigit) {
             return prefix;
         }
