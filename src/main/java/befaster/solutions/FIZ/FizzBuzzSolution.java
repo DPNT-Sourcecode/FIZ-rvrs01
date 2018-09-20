@@ -14,6 +14,8 @@ public class FizzBuzzSolution {
 
             if (numberIsDivisibleBy(number, 2)) {
                 return "fizz buzz deluxe";
+            } else if(!(isMod3 || isMod5)) {
+                return "fizz buzz";
             } else {
                 return "fizz buzz fake deluxe";
             }
