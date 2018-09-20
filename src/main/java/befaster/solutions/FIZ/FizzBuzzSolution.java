@@ -35,24 +35,19 @@ public class FizzBuzzSolution {
         Integer[] numbers = getIntegers(digits);
 
         BiFunction<Integer, Integer, Integer> compareDigits = (Integer a, Integer b) -> a.compareTo(b);
-
-        if (compareDigits.apply(numbers[0], numbers[1]) == 0) {
-            if (numbers.length > 2) {
-                if (compareDigits.apply(numbers[1], numbers[2]) == 0) {
-                    if (numbers.length > 3) {
-                        if(compareDigits.apply(numbers[1], numbers[3]) == 0){
-                            return true;
-                        }
-                    }
-                }
-            }
+        if (numbers.length == 2) {
+            return compareDigits.apply(numbers[0], numbers[1]) == 0;
+        } else if (numbers.length == 3) {
+            return compareDigits.apply(numbers[1], numbers[2]) == 0;
+        } else if (numbers.length == 4) {
+            return compareDigits.apply(numbers[1], numbers[3]) == 0;
         }
         return false;
     }
 
     private Integer[] getIntegers(final String digits) {
         Integer[] numbers = new Integer[digits.length()];
-        for(int i =0 ; i < digits.length(); i++){
+        for (int i = 0; i < digits.length(); i++) {
             numbers[i] = Integer.valueOf(Character.toString(digits.charAt(i)));
         }
         return numbers;
