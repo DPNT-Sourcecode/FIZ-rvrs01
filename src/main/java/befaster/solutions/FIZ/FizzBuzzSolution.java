@@ -16,14 +16,14 @@ public class FizzBuzzSolution {
             return ("fizz"  + numberGreaterThanTen(number));
         } else if (number % 5 == 0 || hasDigit5) {
             return ("buzz"  + numberGreaterThanTen(number));
-        } else if (!numberGreaterThanTen(number).equals(" deluxe")){
-            return number.toString();
+        } else if (number > 10){
+            return numberGreaterThanTen(number).trim();
         }
         return number.toString();
     }
 
     private String numberGreaterThanTen(Integer number) {
-        if (number > 10 && hasAllTheSameDigits(number)) {
+        if (hasAllTheSameDigits(number)) {
             return " deluxe";
         }
         return "";

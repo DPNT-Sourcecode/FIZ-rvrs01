@@ -68,4 +68,9 @@ public class FizSolutionTest {
     public void shouldWriteBuzz_whenNumberDivisibleByFive_andNumberGreaterThanTen_andNumberHasDigitFive() {
         assertThat(fizzBuzzSolution.fizzBuzz(55),is("buzz deluxe"));
     }
+
+    @Test
+    public void shouldReturnNumber() {
+        assertThat(fizzBuzzSolution.fizzBuzz(811),is("811"));
+    }
 }
