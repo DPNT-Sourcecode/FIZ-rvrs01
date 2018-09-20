@@ -17,6 +17,14 @@ public class FizzBuzzSolution {
         return number.toString();
     }
 
+    private boolean isNumberGreaterThanTen(Integer number) {
+        return number > 10 ? true : false;
+    }
+
+    private boolean hasAllTheSameDigits(Integer Number) {
+        return false;
+    }
+
     private boolean digitContainsCharacters(String str, Integer number) {
         return number.toString().contains(str);
     }
