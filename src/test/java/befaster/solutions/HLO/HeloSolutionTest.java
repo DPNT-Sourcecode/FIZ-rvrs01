@@ -14,7 +14,7 @@ public class HeloSolutionTest {
     @Test
     public void shouldSayHelloWorld() {
 
-        assertThat(helloSolution.hello("My Friend"),is("Hello My Friend"));
+        assertThat(helloSolution.hello("Hello, World!"),is("Hello, World!"));
     }
 
 }
