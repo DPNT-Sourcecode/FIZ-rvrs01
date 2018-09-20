@@ -11,11 +11,11 @@ public class FizzBuzzSolution {
 
 
         if ((number % 3 == 0 || hasDigit3) && (number % 5 == 0 || hasDigit5)) {
-            return "fizz buzz" + numberGreaterThanTen(number);
+            return ("fizz buzz" + numberGreaterThanTen(number));
         } else if (number % 3 == 0 || hasDigit3) {
-            return "fizz"  + numberGreaterThanTen(number);
+            return ("fizz"  + numberGreaterThanTen(number));
         } else if (number % 5 == 0 || hasDigit5) {
-            return "buzz"  + numberGreaterThanTen(number);
+            return ("buzz"  + numberGreaterThanTen(number));
         } else {
             return numberGreaterThanTen(number);
         }
@@ -23,7 +23,7 @@ public class FizzBuzzSolution {
 
     private String numberGreaterThanTen(Integer number) {
         if (number > 10 && hasAllTheSameDigits(number)) {
-            return " deluxe";
+            return " deluxe".trim();
         }
         return "";
     }
