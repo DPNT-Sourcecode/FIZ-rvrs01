@@ -11,7 +11,7 @@ public class FizzBuzzSolution {
 
 
         if ((number % 3 == 0 || hasDigit3) && (number % 5 == 0 || hasDigit5)) {
-            return "fizz buzz";
+            return "fizz buzz" + " "+ numberGreaterThanTen(number);
         } else if (number % 3 == 0 || hasDigit3) {
             return "fizz" + " " +numberGreaterThanTen(number);
         } else if (number % 5 == 0 || hasDigit5) {
