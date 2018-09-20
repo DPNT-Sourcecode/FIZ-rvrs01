@@ -12,7 +12,7 @@ public class FizzBuzzSolution {
 
         if((isMod3 || hasDigit3) && (isMod5 || hasDigit5)) {
 
-            if(!(isMod3 || isMod5)) {
+            if(isMod3 || isMod5)) {
                 return "fizz buzz";
             }
             else if (numberIsDivisibleBy(number, 2)) {
