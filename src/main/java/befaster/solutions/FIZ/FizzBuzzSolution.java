@@ -10,8 +10,7 @@ public class FizzBuzzSolution {
         Boolean isMod3 = numberIsDivisibleBy(number, 3 );
         Boolean isMod5 = numberIsDivisibleBy(number, 5 );
 
-        if((isMod3 || isMod5) || (hasDigit5|| hasDigit3)) {
-
+        if((isMod3 || hasDigit3) && (isMod5 || hasDigit5)) {
 
             if (numberIsDivisibleBy(number, 2)) {
                 return "fizz buzz deluxe";
