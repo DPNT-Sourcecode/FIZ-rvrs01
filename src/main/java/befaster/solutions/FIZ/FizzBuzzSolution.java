@@ -10,9 +10,9 @@ public class FizzBuzzSolution {
         if ((number % 3 == 0 || hasDigit3) && (number % 5 == 0 || hasDigit5)) {
             return ("fizz buzz" + numberIsDeluxeOrFakeDeluxe(number));
         } else if (number % 3 == 0) {
-            return ("fizz"  + numberIsDeluxeOrFakeDeluxe(number));
+            return "fizz";
         } else if (number % 5 == 0) {
-            return ("buzz"  + numberIsDeluxeOrFakeDeluxe(number));
+            return "buzz";
         }
         return number.toString();
     }
