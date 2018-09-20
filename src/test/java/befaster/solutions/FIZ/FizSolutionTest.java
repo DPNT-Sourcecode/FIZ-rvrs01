@@ -55,7 +55,17 @@ public class FizSolutionTest {
     }
 
     @Test
-    public void shouldWriteFizzBuzzDelux_whenNumberGreaterThanTen_andHasIdenticalDigits() {
+    public void shouldWriteDelux_whenNumberGreaterThanTen_andHasIdenticalDigits() {
         assertThat(fizzBuzzSolution.fizzBuzz(22),is("deluxe"));
+    }
+
+    @Test
+    public void shouldWriteFizzDelux_whenNumberGreaterThanTen_andHasIdenticalDigits_andNumberHasDigits3() {
+        assertThat(fizzBuzzSolution.fizzBuzz(33),is("fizz deluxe"));
+    }
+
+    @Test
+    public void shouldWriteBuzDelux_whenNumberGreaterThanTen_andHasIdenticalDigits_andNumberHasDigits3() {
+        assertThat(fizzBuzzSolution.fizzBuzz(555),is("buzz deluxe"));
     }
 }
