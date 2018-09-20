@@ -17,13 +17,13 @@ public class FizzBuzzSolution {
         } else if (number % 5 == 0 || hasDigit5) {
             return ("buzz"  + numberGreaterThanTen(number));
         } else {
-            return numberGreaterThanTen(number);
+            return numberGreaterThanTen(number).trim();
         }
     }
 
     private String numberGreaterThanTen(Integer number) {
         if (number > 10 && hasAllTheSameDigits(number)) {
-            return " deluxe".trim();
+            return " deluxe";
         }
         return "";
     }
