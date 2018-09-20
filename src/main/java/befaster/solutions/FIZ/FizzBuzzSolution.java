@@ -36,7 +36,6 @@ public class FizzBuzzSolution {
     private boolean hasAllTheSameDigits(Integer number) {
         String digits = number.toString();
         Integer[] numbers = getIntegers(digits);
-        boolean areAllDigitsTheSame = false;
         if (numbers.length == 2) {
             return numbers[0].compareTo(numbers[1]) == 0;
         } else if (numbers.length == 3) {
