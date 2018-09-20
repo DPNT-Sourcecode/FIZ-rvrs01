@@ -32,13 +32,15 @@ public class FizzBuzzSolution {
 
     private boolean hasAllTheSameDigits(Integer number) {
         String digits = number.toString();
-        Integer[] numbers = new Integer[digits.length()];
+        Integer[] numbers = getIntegers(digits);
 
-        if (numbers[0].compareTo(numbers[1]) == 0) {
+        BiFunction<Integer, Integer, Integer> compareDigits = (Integer a, Integer b) -> a.compareTo(b);
+
+        if (compareDigits.apply(numbers[0], numbers[1]) == 0) {
             if (numbers.length > 2) {
-                if ((numbers[1].compareTo(numbers[2])) == 0) {
+                if (compareDigits.apply(numbers[1], numbers[2]) == 0) {
                     if (numbers.length > 3) {
-                        if(numbers[1].compareTo(numbers[3]) == 0){
+                        if(compareDigits.apply(numbers[1], numbers[3]) == 0){
                             return true;
                         }
                     }
@@ -46,6 +48,14 @@ public class FizzBuzzSolution {
             }
         }
         return false;
+    }
+
+    private Integer[] getIntegers(final String digits) {
+        Integer[] numbers = new Integer[digits.length()];
+        for(int i =0 ; i < digits.length(); i++){
+            numbers[i] = Integer.valueOf(Character.toString(digits.charAt(i)));
+        }
+        return numbers;
     }
 
     private boolean digitContainsCharacters(String str, Integer number) {
