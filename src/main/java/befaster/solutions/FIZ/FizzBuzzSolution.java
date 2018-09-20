@@ -10,19 +10,25 @@ public class FizzBuzzSolution {
         if ((number % 3 == 0 || hasDigit3) && (number % 5 == 0 || hasDigit5)) {
             return ("fizz buzz" + numberIsDeluxeOrFakeDeluxe(number));
         } else if (number % 3 == 0) {
+            if (hasDigit3) {
+                return "fizz deluxe";
+            }
             return "fizz";
         } else if (number % 5 == 0) {
+            if (hasDigit5) {
+                return "buzz deluxe";
+            }
             return "buzz";
         }
         return number.toString();
     }
 
     private String numberIsDeluxeOrFakeDeluxe(Integer number) {
-            if(number % 2 == 0) {
-                return " deluxe";
-            } else {
-                return " fake deluxe";
-            }
+        if (number % 2 == 0) {
+            return " deluxe";
+        } else {
+            return " fake deluxe";
+        }
     }
 
     private boolean digitContainsCharacters(String str, Integer number) {
