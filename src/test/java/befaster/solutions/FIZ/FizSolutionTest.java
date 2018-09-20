@@ -17,20 +17,20 @@ public class FizSolutionTest {
     }
 
     @Test
-    public void shouldWriteFiz_whenNumberDivisibleByFive() {
+    public void shouldWriteFizz_whenNumberDivisibleByFive() {
 
         assertThat(fizzBuzzSolution.fizzBuzz(25),is("buzz"));
     }
 
 
     @Test
-    public void shouldWriteFiz_whenNumberDivisibleByFiveAndThree() {
+    public void shouldWriteFizz_whenNumberDivisibleByFiveAndThree() {
 
         assertThat(fizzBuzzSolution.fizzBuzz(15),is("fizz buzz"));
     }
 
     @Test
-    public void shouldWriteFiz_whenNumberDivisibleByThree_orNumberHasDigitThree() {
+    public void shouldWriteFizz_whenNumberDivisibleByThree_orNumberHasDigitThree() {
         assertThat(fizzBuzzSolution.fizzBuzz(13),is("fizz"));
     }
 
@@ -40,12 +40,22 @@ public class FizSolutionTest {
     }
 
     @Test
-    public void shouldWriteBuzz_whenNumberDivisibleByFiveOrThree_orNumberHasDigitFiveOrThree_FailedFix() {
+    public void shouldWriteFizzBuzz_whenNumberDivisibleByFiveOrThree_orNumberHasDigitFiveOrThree_FailedFix() {
         assertThat(fizzBuzzSolution.fizzBuzz(546),is("fizz buzz"));
     }
 
     @Test
+    public void shouldWriteFizzBuzz_whenNumberDivisibleByFiveOrThree_orNumberHasDigitFiveOrThree() {
+        assertThat(fizzBuzzSolution.fizzBuzz(35),is("fizz buzz"));
+    }
+
+    @Test
     public void shouldWriteBuzz_whenNumberDivisibleByFiveOrThree_orNumberHasDigitFiveOrThree() {
+        assertThat(fizzBuzzSolution.fizzBuzz(35),is("fizz buzz"));
+    }
+
+    @Test
+    public void shouldWriteFizzBuzzDelux_whenNumberGreaterThanTen_andHasIdenticalDigits_andDivisibleByFiveOThree() {
         assertThat(fizzBuzzSolution.fizzBuzz(35),is("fizz buzz"));
     }
 }
