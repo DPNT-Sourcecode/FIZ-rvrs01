@@ -7,31 +7,45 @@ public class FizzBuzzSolution {
         boolean hasDigit3 = digitContainsCharacters("3", number);
         boolean hasDigit5 = digitContainsCharacters("5", number);
 
-        if ((number % 3 == 0 || hasDigit3) && (number % 5 == 0 || hasDigit5)) {
-            return ("fizz buzz" + numberIsDeluxeOrFakeDeluxe(number));
-        } else if (number % 3 == 0) {
-            if (hasDigit3) {
-                return "fizz" + numberIsDeluxeOrFakeDeluxe(number);
+        Boolean isMod3 = numberIsDivisibleBy(number, 3 );
+        Boolean isMod5 = numberIsDivisibleBy(number, 5 );
+
+        if((isMod3 && hasDigit3) || (isMod5 && hasDigit5)) {
+            if(numberIsDivisibleBy(number,2)) {
+                return "fizz buzz deluxe";
+            }else {
+                return "fizz buzz fake deluxe";
             }
-            return "fizz";
-        } else if (number % 5 == 0) {
-            if (hasDigit5) {
-                return "buzz" + numberIsDeluxeOrFakeDeluxe(number);
-            }
-            return "buzz";
         }
+
+        if(isMod3 && hasDigit3) {
+            if(numberIsDivisibleBy(number,2)) {
+                return "fizz deluxe";
+            }else {
+                return "fizz fake deluxe";
+            }
+        }
+
+        if(isMod5 && hasDigit5) {
+            if(numberIsDivisibleBy(number,2)){
+                return "buzz deluxe";
+            }else {
+                return "buzz fake deluxe";
+            }
+        }
+
         return number.toString();
     }
 
-    private String numberIsDeluxeOrFakeDeluxe(Integer number) {
-        if (number % 2 == 0) {
-            return " deluxe";
-        } else {
-            return " fake deluxe";
-        }
-    }
 
     private boolean digitContainsCharacters(String str, Integer number) {
         return number.toString().contains(str);
     }
+
+    private boolean numberIsDivisibleBy( Integer number, int diviser) {
+       if (number % diviser == 0) {
+        return true;
+       }
+       return false;
+   }
 }
