@@ -56,22 +56,22 @@ public class FizSolutionTest {
 
     @Test
     public void shouldWriteFizzDelux_whenNumberGreaterThanTen_andHasIdenticalDigits_andNumberHasDigits3() {
-        assertThat(fizzBuzzSolution.fizzBuzz(33),is("fizz deluxe"));
+        assertThat(fizzBuzzSolution.fizzBuzz(33),is("fizz fake deluxe"));
     }
 
     @Test
     public void shouldWriteBuzDelux_whenNumberGreaterThanTen_andHasIdenticalDigits_andNumberHasDigits3() {
-        assertThat(fizzBuzzSolution.fizzBuzz(555),is("fizz buzz deluxe"));
+        assertThat(fizzBuzzSolution.fizzBuzz(555),is("fizz buzz fake deluxe"));
     }
 
     @Test
     public void shouldWriteBuzz_whenNumberDivisibleByFive_andNumberGreaterThanTen_andNumberHasDigitFive() {
-        assertThat(fizzBuzzSolution.fizzBuzz(55),is("buzz deluxe"));
+        assertThat(fizzBuzzSolution.fizzBuzz(55),is("buzz fake deluxe"));
     }
 
     @Test
     public void shouldWriteFakeDelux_whenNumberDivisibleByFive_andNumberGreaterThanTen_andNumberHasAllSameOddDigits() {
-        assertThat(fizzBuzzSolution.fizzBuzz(55),is("buzz fake deluxe"));
+        assertThat(fizzBuzzSolution.fizzBuzz(333),is("fizz fake deluxe"));
     }
 
 }

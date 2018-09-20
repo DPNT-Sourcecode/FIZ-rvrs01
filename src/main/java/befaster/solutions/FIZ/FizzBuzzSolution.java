@@ -28,7 +28,11 @@ public class FizzBuzzSolution {
 
     private String numberGreaterThanTen(Integer number) {
         if (hasAllTheSameDigits(number)) {
-            return " deluxe";
+            if(number % 2 == 0) {
+                return " deluxe";
+            }else {
+                return " fake deluxe";
+            }
         }
         return "";
     }
