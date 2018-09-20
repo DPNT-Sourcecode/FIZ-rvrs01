@@ -13,13 +13,7 @@ public class FizzBuzzSolution {
             return ("fizz"  + numberIsDeluxeOrFakeDeluxe(number));
         } else if (number % 5 == 0 || hasDigit5) {
             return ("buzz"  + numberIsDeluxeOrFakeDeluxe(number));
-        } else if (number > 10){
-            if(numberIsDeluxeOrFakeDeluxe(number).trim() != "") {
-                return numberIsDeluxeOrFakeDeluxe(number).trim();
-            } else {
-                return number.toString();
-            }
-        }
+        } 
         return number.toString();
     }
 
