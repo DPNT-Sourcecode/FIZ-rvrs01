@@ -1,7 +1,5 @@
 package befaster.solutions.FIZ;
 
-import java.util.function.BiFunction;
-
 public class FizzBuzzSolution {
 
     public String fizzBuzz(Integer number) {
@@ -11,14 +9,14 @@ public class FizzBuzzSolution {
 
 
         if ((number % 3 == 0 || hasDigit3) && (number % 5 == 0 || hasDigit5)) {
-            return ("fizz buzz" + numberGreaterThanTen(number));
+            return ("fizz buzz" + numberIsDeluxeOrFakeDeluxe(number));
         } else if (number % 3 == 0 || hasDigit3) {
-            return ("fizz"  + numberGreaterThanTen(number));
+            return ("fizz"  + numberIsDeluxeOrFakeDeluxe(number));
         } else if (number % 5 == 0 || hasDigit5) {
-            return ("buzz"  + numberGreaterThanTen(number));
+            return ("buzz"  + numberIsDeluxeOrFakeDeluxe(number));
         } else if (number > 10){
-            if(numberGreaterThanTen(number).trim() != "") {
-                return numberGreaterThanTen(number).trim();
+            if(numberIsDeluxeOrFakeDeluxe(number).trim() != "") {
+                return numberIsDeluxeOrFakeDeluxe(number).trim();
             } else {
                 return number.toString();
             }
@@ -26,29 +24,26 @@ public class FizzBuzzSolution {
         return number.toString();
     }
 
-    private String numberGreaterThanTen(Integer number) {
-        if (hasAllTheSameDigits(number)) {
+    private String numberIsDeluxeOrFakeDeluxe(Integer number) {
             if(number % 2 == 0) {
                 return " deluxe";
-            }else {
+            } else {
                 return " fake deluxe";
             }
-        }
-        return "";
     }
 
-    private boolean hasAllTheSameDigits(Integer number) {
-        String digits = number.toString();
-        Integer[] numbers = getIntegers(digits);
-        if (numbers.length == 2) {
-            return numbers[0].compareTo(numbers[1]) == 0;
-        } else if (numbers.length == 3) {
-            return numbers[0].compareTo(numbers[2]) ==0 && numbers[0].compareTo(numbers[1]) == 0;
-        } else if (numbers.length == 4) {
-            return numbers[0].compareTo(numbers[2]) ==0 && numbers[0].compareTo(numbers[1]) == 0 && numbers[0].compareTo(numbers[3]) == 0;
-        }
-        return false;
-    }
+//    private boolean hasAllTheSameDigits(Integer number) {
+//        String digits = number.toString();
+//        Integer[] numbers = getIntegers(digits);
+//        if (numbers.length == 2) {
+//            return numbers[0].compareTo(numbers[1]) == 0;
+//        } else if (numbers.length == 3) {
+//            return numbers[0].compareTo(numbers[2]) ==0 && numbers[0].compareTo(numbers[1]) == 0;
+//        } else if (numbers.length == 4) {
+//            return numbers[0].compareTo(numbers[2]) ==0 && numbers[0].compareTo(numbers[1]) == 0 && numbers[0].compareTo(numbers[3]) == 0;
+//        }
+//        return false;
+//    }
 
     private Integer[] getIntegers(final String digits) {
         Integer[] numbers = new Integer[digits.length()];

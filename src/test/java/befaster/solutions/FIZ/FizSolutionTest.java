@@ -74,12 +74,4 @@ public class FizSolutionTest {
         assertThat(fizzBuzzSolution.fizzBuzz(333),is("fizz fake deluxe"));
     }
 
-    @Test
-    public void shouldReturnNumber_1000() {
-        for(int i =0; i < 9999; i++) {
-            System.out.println(i +" "+ "+ i % 3  = " + (i % 3) + " i % 5 = " +(i % 5) + " "+ fizzBuzzSolution.fizzBuzz(i));
-            //  System.out.println(fizzBuzzSolution.fizzBuzz(i));
-        }
-    }
-
 }
