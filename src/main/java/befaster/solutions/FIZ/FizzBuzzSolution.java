@@ -11,12 +11,12 @@ public class FizzBuzzSolution {
             return ("fizz buzz" + numberIsDeluxeOrFakeDeluxe(number));
         } else if (number % 3 == 0) {
             if (hasDigit3) {
-                return "fizz" +numberIsDeluxeOrFakeDeluxe(number);
+                return "fizz" + numberIsDeluxeOrFakeDeluxe(number);
             }
             return "fizz";
         } else if (number % 5 == 0) {
             if (hasDigit5) {
-                return "buzz" +numberIsDeluxeOrFakeDeluxe(number);
+                return "buzz" + numberIsDeluxeOrFakeDeluxe(number);
             }
             return "buzz";
         }
