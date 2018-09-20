@@ -11,7 +11,8 @@ public class FizzBuzzSolution {
         Boolean isMod5 = numberIsDivisibleBy(number, 5 );
 
         if((isMod3 || hasDigit3) && (isMod5 || hasDigit5)) {
-            geKeywordDividedByDigitAndContainsDigit(number, true, true, "fizz buzz");
+            String fizbuzz = geKeywordDividedByDigitAndContainsDigit(number, true, true, "fizz buzz");
+
             if (numberIsDivisibleBy(number, 2)) {
                 return "fizz buzz deluxe";
             } else {
