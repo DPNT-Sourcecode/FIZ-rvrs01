@@ -81,14 +81,6 @@ public class FizSolutionTest {
 
     @Test
     public void shouldReturnNumber_1000() {
-        assertThat(fizzBuzzSolution.fizzBuzz(1000),is("buzz"));
+        assertThat(fizzBuzzSolution.fizzBuzz(977),is("buzz"));
     }
-
-    @Test
-    public void shouldReturnNumber_151() {
-        assertThat(fizzBuzzSolution.fizzBuzz( 151),is("buzz"));
-    }
-
-
-
 }
