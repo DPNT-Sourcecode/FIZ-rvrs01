@@ -7,7 +7,6 @@ public class FizzBuzzSolution {
         boolean hasDigit3 = digitContainsCharacters("3", number);
         boolean hasDigit5 = digitContainsCharacters("5", number);
 
-
         if ((number % 3 == 0 || hasDigit3) && (number % 5 == 0 || hasDigit5)) {
             return ("fizz buzz" + numberIsDeluxeOrFakeDeluxe(number));
         } else if (number % 3 == 0 || hasDigit3) {
@@ -30,27 +29,6 @@ public class FizzBuzzSolution {
             } else {
                 return " fake deluxe";
             }
-    }
-
-//    private boolean hasAllTheSameDigits(Integer number) {
-//        String digits = number.toString();
-//        Integer[] numbers = getIntegers(digits);
-//        if (numbers.length == 2) {
-//            return numbers[0].compareTo(numbers[1]) == 0;
-//        } else if (numbers.length == 3) {
-//            return numbers[0].compareTo(numbers[2]) ==0 && numbers[0].compareTo(numbers[1]) == 0;
-//        } else if (numbers.length == 4) {
-//            return numbers[0].compareTo(numbers[2]) ==0 && numbers[0].compareTo(numbers[1]) == 0 && numbers[0].compareTo(numbers[3]) == 0;
-//        }
-//        return false;
-//    }
-
-    private Integer[] getIntegers(final String digits) {
-        Integer[] numbers = new Integer[digits.length()];
-        for (int i = 0; i < digits.length(); i++) {
-            numbers[i] = Integer.valueOf(Character.toString(digits.charAt(i)));
-        }
-        return numbers;
     }
 
     private boolean digitContainsCharacters(String str, Integer number) {
