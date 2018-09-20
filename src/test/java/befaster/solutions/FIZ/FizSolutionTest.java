@@ -19,14 +19,14 @@ public class FizSolutionTest {
     @Test
     public void shouldWriteFizz_whenNumberDivisibleByFive() {
 
-        assertThat(fizzBuzzSolution.fizzBuzz(25),is("buzz deluxe"));
+        assertThat(fizzBuzzSolution.fizzBuzz(25),is("buzz fake deluxe"));
     }
 
 
     @Test
     public void shouldWriteFizz_whenNumberDivisibleByFiveAndThree() {
 
-        assertThat(fizzBuzzSolution.fizzBuzz(15),is("fizz buzz deluxe"));
+        assertThat(fizzBuzzSolution.fizzBuzz(15),is("fizz buzz fake deluxe"));
     }
 
     @Test
