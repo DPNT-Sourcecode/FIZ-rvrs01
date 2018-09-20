@@ -81,6 +81,9 @@ public class FizSolutionTest {
 
     @Test
     public void shouldReturnNumber_1000() {
-        assertThat(fizzBuzzSolution.fizzBuzz(977),is("buzz"));
+        for(int i =0; i < 9999; i++) {
+            System.out.println("+ i % 3  = " + (i % 3) + " i % 5" +(i % 5));
+          //  System.out.println(fizzBuzzSolution.fizzBuzz(i));
+        }
     }
 }
