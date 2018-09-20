@@ -17,10 +17,8 @@ public class FizzBuzzSolution {
         } else if (number % 5 == 0 || hasDigit5) {
             return "buzz";
         } else {
-            numberGreaterThanTen(number);
+            return numberGreaterThanTen(number);
         }
-
-        return number.toString();
     }
 
     private String numberGreaterThanTen(Integer number) {
