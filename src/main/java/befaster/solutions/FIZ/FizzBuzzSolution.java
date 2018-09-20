@@ -6,7 +6,7 @@ public class FizzBuzzSolution {
 
         if ((number % 3 == 0) && (number % 5 == 0)
                 || (digitContainsCharacters("3", number)
-                && digitContainsCharacters("5", number))) {
+                || digitContainsCharacters("5", number))) {
             return "fizz buzz";
         } else if (number % 3 == 0 || digitContainsCharacters("3", number)) {
             return "fizz";
