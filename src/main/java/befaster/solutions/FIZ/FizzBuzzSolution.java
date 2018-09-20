@@ -36,9 +36,9 @@ public class FizzBuzzSolution {
         if (numbers.length == 2) {
             return numbers[0].compareTo(numbers[1]) == 0;
         } else if (numbers.length == 3) {
-            return numbers[1].compareTo(numbers[2]) == 0;
+            return numbers[0].compareTo(numbers[2]) == 0;
         } else if (numbers.length == 4) {
-            return numbers[1].compareTo(numbers[3]) == 0;
+            return numbers[0].compareTo(numbers[3]) == 0;
         }
         return false;
     }
