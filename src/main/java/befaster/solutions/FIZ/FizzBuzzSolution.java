@@ -4,13 +4,14 @@ public class FizzBuzzSolution {
 
     public String fizzBuzz(Integer number) {
 
-        if ((number % 3 == 0) && (number % 5 == 0)
-                || (digitContainsCharacters("3", number)
-                || digitContainsCharacters("5", number))) {
+        boolean hasDigit3 = digitContainsCharacters("3", number);
+        boolean hasDigit5 = digitContainsCharacters("5", number);
+
+        if ((number % 3 == 0 || hasDigit3) && (number % 5 == 0 || hasDigit5)) {
             return "fizz buzz";
-        } else if (number % 3 == 0 || digitContainsCharacters("3", number)) {
+        } else if (number % 3 == 0 || hasDigit3) {
             return "fizz";
-        } else if (number % 5 == 0 || digitContainsCharacters("5", number)) {
+        } else if (number % 5 == 0 || hasDigit5) {
             return "buzz";
         }
         return number.toString();
