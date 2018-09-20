@@ -34,13 +34,11 @@ public class FizzBuzzSolution {
         String digits = number.toString();
         Integer[] numbers = new Integer[digits.length()];
 
-        BiFunction<Integer, Integer, Integer> compareDigits = (a, b) -> a.compareTo(b);
-
-        if (compareDigits.apply(numbers[0], numbers[1]) == 0) {
+        if (numbers[0].compareTo(numbers[1]) == 0) {
             if (numbers.length > 2) {
-                if (compareDigits.apply(numbers[1], numbers[2]) == 0) {
+                if ((numbers[1].compareTo(numbers[2])) == 0) {
                     if (numbers.length > 3) {
-                        if(compareDigits.apply(numbers[1], numbers[3]) == 0){
+                        if(numbers[1].compareTo(numbers[3]) == 0){
                             return true;
                         }
                     }
