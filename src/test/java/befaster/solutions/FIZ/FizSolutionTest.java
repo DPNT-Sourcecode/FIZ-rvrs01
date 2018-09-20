@@ -69,4 +69,9 @@ public class FizSolutionTest {
         assertThat(fizzBuzzSolution.fizzBuzz(55),is("buzz deluxe"));
     }
 
+    @Test
+    public void shouldWriteFakeDelux_whenNumberDivisibleByFive_andNumberGreaterThanTen_andNumberHasAllSameOddDigits() {
+        assertThat(fizzBuzzSolution.fizzBuzz(55),is("buzz fake deluxe"));
+    }
+
 }
