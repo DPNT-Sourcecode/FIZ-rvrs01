@@ -38,7 +38,7 @@ public class FizzBuzzSolution {
         } else if(isModNumber || hasDigit) {
             return prefix;
         }
-        return prefix;
+        return null;
     }
 
 
