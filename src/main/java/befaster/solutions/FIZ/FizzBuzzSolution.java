@@ -25,7 +25,7 @@ public class FizzBuzzSolution {
 
     private String numberGreaterThanTen(Integer number) {
         if (number > 10 && hasAllTheSameDigits(number)) {
-            return "delux";
+            return "deluxe";
         }
         return "";
     }
@@ -34,13 +34,12 @@ public class FizzBuzzSolution {
         String digits = number.toString();
         Integer[] numbers = getIntegers(digits);
 
-        BiFunction<Integer, Integer, Integer> compareDigits = (Integer a, Integer b) -> a.compareTo(b);
         if (numbers.length == 2) {
-            return compareDigits.apply(numbers[0], numbers[1]) == 0;
+            return numbers[0].compareTo(numbers[1]) == 0;
         } else if (numbers.length == 3) {
-            return compareDigits.apply(numbers[1], numbers[2]) == 0;
+            return numbers[1].compareTo(numbers[2]) == 0;
         } else if (numbers.length == 4) {
-            return compareDigits.apply(numbers[1], numbers[3]) == 0;
+            return numbers[1].compareTo(numbers[3]) == 0;
         }
         return false;
     }
