@@ -34,4 +34,9 @@ public class FizSolutionTest {
         assertThat(fizzBuzzSolution.fizzBuzz(13),is("fizz"));
     }
 
+    @Test
+    public void shouldWriteBuzz_whenNumberDivisibleByFive_orNumberHasDigitFive() {
+        assertThat(fizzBuzzSolution.fizzBuzz(51),is("buzz"));
+    }
+
 }

@@ -8,7 +8,7 @@ public class FizzBuzzSolution {
             return "fizz buzz";
         } else if (number % 3 == 0 ||  digitContainsCharcters("3", number) ) {
             return "fizz";
-        } else if (number % 5 == 0) {
+        } else if (number % 5 == 0 || digitContainsCharcters("5", number)) {
             return "buzz";
         }
         return number.toString();
