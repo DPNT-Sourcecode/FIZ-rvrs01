@@ -4,9 +4,9 @@ public class FizzBuzzSolution {
 
     public String fizzBuzz(Integer number) {
 
-        if ((number % 3 == 0) && (number % 5 == 0)) {
+        if ((number % 3 == 0) && (number % 5 == 0) ){
             return "fizz buzz";
-        } else if (number % 3 == 0) {
+        } else if (number % 3 == 0 ||  digitContainsCharcters("3", number) ) {
             return "fizz";
         } else if (number % 5 == 0) {
             return "buzz";
@@ -14,4 +14,7 @@ public class FizzBuzzSolution {
         return number.toString();
     }
 
+    private boolean digitContainsCharcters(String str, Integer number){
+        return number.toString().contains(str);
+    }
 }
