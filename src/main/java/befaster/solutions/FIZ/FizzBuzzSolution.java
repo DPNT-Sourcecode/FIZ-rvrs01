@@ -9,9 +9,9 @@ public class FizzBuzzSolution {
 
         if ((number % 3 == 0 || hasDigit3) && (number % 5 == 0 || hasDigit5)) {
             return ("fizz buzz" + numberIsDeluxeOrFakeDeluxe(number));
-        } else if (number % 3 == 0 && hasDigit3) {
+        } else if (number % 3 == 0) {
             return ("fizz"  + numberIsDeluxeOrFakeDeluxe(number));
-        } else if (number % 5 == 0 && hasDigit5) {
+        } else if (number % 5 == 0) {
             return ("buzz"  + numberIsDeluxeOrFakeDeluxe(number));
         }
         return number.toString();
