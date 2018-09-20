@@ -31,7 +31,7 @@ public class FizSolutionTest {
 
     @Test
     public void shouldWriteFizz_whenNumberDivisibleByThree_orNumberHasDigitThree() {
-        assertThat(fizzBuzzSolution.fizzBuzz(13),is("fizz fake deluxe"));
+        assertThat(fizzBuzzSolution.fizzBuzz(13),is("13"));
     }
 
     @Test
