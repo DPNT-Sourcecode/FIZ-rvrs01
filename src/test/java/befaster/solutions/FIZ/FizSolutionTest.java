@@ -76,6 +76,11 @@ public class FizSolutionTest {
 
     @Test
     public void shouldReturnNumber_500() {
+        assertThat(fizzBuzzSolution.fizzBuzz(577),is("buzz"));
+    }
+
+    @Test
+    public void shouldReturnNumber_1000() {
         assertThat(fizzBuzzSolution.fizzBuzz(1000),is("buzz"));
     }
 
