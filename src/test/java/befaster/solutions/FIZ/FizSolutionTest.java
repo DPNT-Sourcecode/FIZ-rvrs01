@@ -68,4 +68,9 @@ public class FizSolutionTest {
     public void shouldWriteBuzDelux_whenNumberGreaterThanTen_andHasIdenticalDigits_andNumberHasDigits3() {
         assertThat(fizzBuzzSolution.fizzBuzz(555),is("fizz buzz deluxe"));
     }
+
+    @Test
+    public void shouldWriteBuzz_whenNumberDivisibleByFive_andNumberGreaterThanTen_andNumberHasDigitFive() {
+        assertThat(fizzBuzzSolution.fizzBuzz(55),is("buzz deluxe"));
+    }
 }
