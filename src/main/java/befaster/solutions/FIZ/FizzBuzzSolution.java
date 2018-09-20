@@ -30,7 +30,7 @@ public class FizzBuzzSolution {
 
         if(isModNumber && hasDigit) {
             if(numberIsDivisibleBy(number,2)){
-                prefix = prefix +  "deluxe";
+                prefix = prefix +  " deluxe";
             }else {
                 prefix = prefix+ " fake deluxe";
             }
