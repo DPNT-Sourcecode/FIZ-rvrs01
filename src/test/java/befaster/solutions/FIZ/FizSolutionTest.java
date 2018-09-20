@@ -51,7 +51,7 @@ public class FizSolutionTest {
 
     @Test
     public void shouldWriteDelux_whenNumberGreaterThanTen_andHasIdenticalDigits() {
-        assertThat(fizzBuzzSolution.fizzBuzz(163),is("fizz"));
+        assertThat(fizzBuzzSolution.fizzBuzz(167),is("fizz"));
     }
 
     @Test
