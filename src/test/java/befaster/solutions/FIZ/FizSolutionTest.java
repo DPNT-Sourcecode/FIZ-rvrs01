@@ -22,4 +22,11 @@ public class FizSolutionTest {
         assertThat(fizzBuzzSolution.fizzBuzz(25),is("buzz"));
     }
 
+
+    @Test
+    public void shouldWriteFiz_whenNumberDivisibleByFiveAndThree() {
+
+        assertThat(fizzBuzzSolution.fizzBuzz(15),is("fizz buzz"));
+    }
+
 }
