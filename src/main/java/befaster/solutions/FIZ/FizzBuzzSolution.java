@@ -23,8 +23,14 @@ public class FizzBuzzSolution {
 
         String process() {
             List<Optional<FizzBuzzIdentifier>> fizzBuzzIdentifierList = new ArrayList<>();
-            fizzBuzzIdentifierList.add(extract(3, "fizz"));
-            fizzBuzzIdentifierList.add(extract(5, "buzz"));
+            Optional<FizzBuzzIdentifier> fizzIdentifier = extract(3, "fizz");
+            if(fizzIdentifier.isPresent()) {
+                fizzBuzzIdentifierList.add(fizzIdentifier);
+            }
+            Optional<FizzBuzzIdentifier> buzzIdentifier = extract(5, "buzz");
+            if(buzzIdentifier.isPresent()) {
+                fizzBuzzIdentifierList.add(buzzIdentifier);
+            }
 
             if (!fizzBuzzIdentifierList.isEmpty()) {
                 StringBuilder builder = new StringBuilder();

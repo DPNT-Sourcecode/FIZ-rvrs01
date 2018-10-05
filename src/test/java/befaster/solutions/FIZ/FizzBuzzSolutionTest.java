@@ -28,7 +28,7 @@ public class FizzBuzzSolutionTest {
 
     @Test
     public void testThatNumberANumberThatIsDivisibleBy3AndContainsTheNumber3AndIfItsAEvenNumberReturnsFizzDeluxe() {
-//        assertThat(fizzBuzzSolution.fizzBuzz(30), is("fizz deluxe"));
+        assertThat(fizzBuzzSolution.fizzBuzz(30), is("fizz buzz deluxe"));
     }
 
     @Test
