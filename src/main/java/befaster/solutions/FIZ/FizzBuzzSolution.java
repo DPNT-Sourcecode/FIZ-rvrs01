@@ -1,7 +1,5 @@
 package befaster.solutions.FIZ;
 
-import befaster.runner.SolutionNotImplementedException;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -47,7 +45,7 @@ public class FizzBuzzSolution {
             for(Optional<FizzBuzzIdentifier> fizzBuzzIdentifier : fizzBuzzIdentifierList) {
                 if(fizzBuzzIdentifier.isPresent()) {
                     if(fizzBuzzIdentifier.get().isDivisible) {
-                        if(number.toString().contains("3") || number.toString().contains("5")) {
+                        if(fizzBuzzIdentifier.get().isDeluxe()) {
                             if(number % 2 == 0) {
                                 return " deluxe";
                             }
@@ -72,22 +70,32 @@ public class FizzBuzzSolution {
 
         private Optional<FizzBuzzIdentifier> extract(Integer compareTo, String type) {
             if(number % compareTo == 0) {
-                return Optional.of(new FizzBuzzIdentifier(type, true));
+                return Optional.of(new FizzBuzzIdentifier(type, true, containCompareNumber(compareTo)));
             }
             if(String.valueOf(number).contains(compareTo.toString())) {
-                return Optional.of(new FizzBuzzIdentifier(type, false));
+                return Optional.of(new FizzBuzzIdentifier(type, false, containCompareNumber(compareTo)));
             }
             return Optional.empty();
+        }
+
+        private boolean containCompareNumber(Integer hasNumber) {
+            return number.toString().contains(hasNumber.toString());
         }
     }
 
     private class FizzBuzzIdentifier {
         private String type;
         private boolean isDivisible;
+        private boolean hasNumber;
 
-        public FizzBuzzIdentifier(String type, boolean isDivisible) {
+        FizzBuzzIdentifier(String type, boolean isDivisible, boolean hasNumber) {
             this.type = type;
             this.isDivisible = isDivisible;
+            this.hasNumber = hasNumber;
+        }
+
+        boolean isDeluxe() {
+            return isDivisible && hasNumber;
         }
     }
 }
