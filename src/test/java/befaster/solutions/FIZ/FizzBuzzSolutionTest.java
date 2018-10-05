@@ -39,9 +39,9 @@ public class FizzBuzzSolutionTest {
     }
 
     @Test
-    public void testThatNonDeluxeNumberReturnsNull() {
-        assertThat(fizzBuzzSolution.fizzBuzz(1), is(nullValue()));
-        assertThat(fizzBuzzSolution.fizzBuzz(6), is(nullValue()));
-        assertThat(fizzBuzzSolution.fizzBuzz(20), is(nullValue()));
+    public void testThatNonDeluxeNumberReturnsActualNumber() {
+        assertThat(fizzBuzzSolution.fizzBuzz(1), is("1"));
+        assertThat(fizzBuzzSolution.fizzBuzz(6), is("6"));
+        assertThat(fizzBuzzSolution.fizzBuzz(20), is("20"));
     }
 }
