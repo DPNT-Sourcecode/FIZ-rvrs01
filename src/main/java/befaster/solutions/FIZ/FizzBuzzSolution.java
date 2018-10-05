@@ -18,10 +18,13 @@ public class FizzBuzzSolution {
         }
 
         if(builder.length() != 0) {
-            if(number % 2 == 0) {
-                return builder.append(" deluxe").toString();
+            if(numberValue.contains("3") || numberValue.contains("5")) {
+                if(number % 2 == 0) {
+                    return builder.append(" deluxe").toString();
+                }
+                return builder.append(" fake deluxe").toString();
             }
-            return builder.append(" fake deluxe").toString();
+            return builder.toString();
         }
         return numberValue;
     }
