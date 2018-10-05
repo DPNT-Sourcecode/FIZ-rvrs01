@@ -19,6 +19,8 @@ public class FizzBuzzSolutionTest {
     @Test
     public void testThatNumberANumberThatIsDivisibleBy3AndContainsTheNumber3ReturnsFizzDeluxe() {
         assertThat(fizzBuzzSolution.fizzBuzz(3), is("fizz deluxe"));
+        assertThat(fizzBuzzSolution.fizzBuzz(30), is("fizz deluxe"));
+        assertThat(fizzBuzzSolution.fizzBuzz(33), is("fizz deluxe"));
     }
 
     @Test
