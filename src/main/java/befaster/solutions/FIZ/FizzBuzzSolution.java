@@ -43,9 +43,9 @@ public class FizzBuzzSolution {
                     if(fizzBuzzIdentifier.get().isDivisible) {
                         if(number.toString().contains("3") || number.toString().contains("5")) {
                             if(number % 2 == 0) {
-                                return "deluxe";
+                                return " deluxe";
                             }
-                            return "fake deluxe";
+                            return " fake deluxe";
                         }
                     }
                 }
