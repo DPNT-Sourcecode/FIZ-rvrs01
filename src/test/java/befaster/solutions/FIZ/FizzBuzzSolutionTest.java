@@ -39,6 +39,11 @@ public class FizzBuzzSolutionTest {
     }
 
     @Test
+    public void testThatNumberANumberThatIsDivisibleByBoth3And5AndAlsoContainsBothNumber3And5ReturnsFizzBuzzFakeDeluxe() {
+        assertThat(fizzBuzzSolution.fizzBuzz(30), is("fizz buzz fake deluxe"));
+    }
+
+    @Test
     public void testThatNonDeluxeNumberReturnsActualNumber() {
         assertThat(fizzBuzzSolution.fizzBuzz(1), is("1"));
         assertThat(fizzBuzzSolution.fizzBuzz(6), is("6"));
