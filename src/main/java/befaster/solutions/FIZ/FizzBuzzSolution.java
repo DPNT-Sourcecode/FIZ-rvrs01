@@ -26,12 +26,15 @@ public class FizzBuzzSolution {
             fizzBuzzIdentifierList.add(extract(3, "fizz"));
             fizzBuzzIdentifierList.add(extract(5, "buzz"));
 
-            StringBuilder builder = new StringBuilder();
-            for(Optional<FizzBuzzIdentifier> fizzBuzzIdentifier : fizzBuzzIdentifierList) {
-                append(builder, fizzBuzzIdentifier);
+            if (!fizzBuzzIdentifierList.isEmpty()) {
+                StringBuilder builder = new StringBuilder();
+                for(Optional<FizzBuzzIdentifier> fizzBuzzIdentifier : fizzBuzzIdentifierList) {
+                    append(builder, fizzBuzzIdentifier);
+                }
+                builder.append(extractDeluxe(fizzBuzzIdentifierList));
+                return builder.toString();
             }
-            builder.append(extractDeluxe(fizzBuzzIdentifierList));
-            return builder.toString();
+            return number.toString();
         }
 
         String extractDeluxe(List<Optional<FizzBuzzIdentifier>> fizzBuzzIdentifierList) {
