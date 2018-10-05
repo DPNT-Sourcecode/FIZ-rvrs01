@@ -17,18 +17,25 @@ public class FizzBuzzSolutionTest {
     }
 
     @Test
-    public void testThatNumberANumberThatIsDivisibleBy3AndContainsTheNumber3ReturnsFizzDeluxe() {
-        assertThat(fizzBuzzSolution.fizzBuzz(3), is("fizz deluxe"));
+    public void testThatNumberANumberThatIsDivisibleBy3AndContainsTheNumber3AndIfItsAEvenNumberReturnsFizzDeluxe() {
         assertThat(fizzBuzzSolution.fizzBuzz(30), is("fizz deluxe"));
-        assertThat(fizzBuzzSolution.fizzBuzz(33), is("fizz deluxe"));
     }
 
+    @Test
+    public void testThatNumberANumberThatIsDivisibleBy3AndContainsTheNumber3AndIfItsAOddNumberReturnsFizzFakeDeluxe() {
+        assertThat(fizzBuzzSolution.fizzBuzz(3), is("fizz fake deluxe"));
+        assertThat(fizzBuzzSolution.fizzBuzz(33), is("fizz fake deluxe"));
+    }
 
     @Test
-    public void testThatNumberANumberThatIsDivisibleBy5AndContainsTheNumber5ReturnsFizzDeluxe() {
-        assertThat(fizzBuzzSolution.fizzBuzz(5), is("buzz deluxe"));
+    public void testThatNumberANumberThatIsDivisibleBy5AndContainsTheNumber5AndIfItsAEvenNumberReturnsFizzDeluxe() {
         assertThat(fizzBuzzSolution.fizzBuzz(50), is("buzz deluxe"));
-        assertThat(fizzBuzzSolution.fizzBuzz(55), is("buzz deluxe"));
+    }
+
+    @Test
+    public void testThatNumberANumberThatIsDivisibleBy5AndContainsTheNumber5AndIfItsAOddNumberReturnsFizzFakeDeluxe() {
+        assertThat(fizzBuzzSolution.fizzBuzz(5), is("buzz fake deluxe"));
+        assertThat(fizzBuzzSolution.fizzBuzz(55), is("buzz fake deluxe"));
     }
 
     @Test
