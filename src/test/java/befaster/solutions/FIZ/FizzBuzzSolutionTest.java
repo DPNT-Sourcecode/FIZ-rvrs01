@@ -17,8 +17,14 @@ public class FizzBuzzSolutionTest {
 
     @Test
     public void testThatNumberANumberThatIsDivisibleBy3ReturnsFizz() {
-        assertThat(fizzBuzzSolution.fizzBuzz(30), is("fizz deluxe"));
+        assertThat(fizzBuzzSolution.fizzBuzz(27), is("fizz"));
     }
+
+    @Test
+    public void testThatNumberANumberThatIsDivisibleBy5ReturnsBuzz() {
+        assertThat(fizzBuzzSolution.fizzBuzz(20), is("buzz"));
+    }
+
 
     @Test
     public void testThatNumberANumberThatIsDivisibleBy3AndContainsTheNumber3AndIfItsAEvenNumberReturnsFizzDeluxe() {
@@ -50,7 +56,5 @@ public class FizzBuzzSolutionTest {
     @Test
     public void testThatNonDeluxeNumberReturnsActualNumber() {
         assertThat(fizzBuzzSolution.fizzBuzz(1), is("1"));
-        assertThat(fizzBuzzSolution.fizzBuzz(6), is("6"));
-        assertThat(fizzBuzzSolution.fizzBuzz(20), is("20"));
     }
 }
