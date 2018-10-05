@@ -11,6 +11,9 @@ public class FizzBuzzSolution {
             builder.append("fizz");
         }
         if(number % 5 == 0 && numberValue.contains("5")) {
+            if(builder.length() != 0 ) {
+                builder.append(" ");
+            }
             builder.append("buzz");
         }
 

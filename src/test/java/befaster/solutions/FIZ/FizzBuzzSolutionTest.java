@@ -40,7 +40,7 @@ public class FizzBuzzSolutionTest {
 
     @Test
     public void testThatNumberANumberThatIsDivisibleByBoth3And5AndAlsoContainsBothNumber3And5ReturnsFizzBuzzFakeDeluxe() {
-        assertThat(fizzBuzzSolution.fizzBuzz(533), is("fizz buzz fake deluxe"));
+        assertThat(fizzBuzzSolution.fizzBuzz(315), is("fizz buzz fake deluxe"));
     }
 
     @Test
