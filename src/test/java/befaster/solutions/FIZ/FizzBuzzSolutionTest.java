@@ -23,8 +23,18 @@ public class FizzBuzzSolutionTest {
         assertThat(fizzBuzzSolution.fizzBuzz(33), is("fizz deluxe"));
     }
 
+
+    @Test
+    public void testThatNumberANumberThatIsDivisibleBy5AndContainsTheNumber5ReturnsFizzDeluxe() {
+        assertThat(fizzBuzzSolution.fizzBuzz(5), is("buzz deluxe"));
+        assertThat(fizzBuzzSolution.fizzBuzz(50), is("buzz deluxe"));
+        assertThat(fizzBuzzSolution.fizzBuzz(55), is("buzz deluxe"));
+    }
+
     @Test
     public void testThatNonDeluxeNumberReturnsNull() {
         assertThat(fizzBuzzSolution.fizzBuzz(1), is(nullValue()));
+        assertThat(fizzBuzzSolution.fizzBuzz(6), is(nullValue()));
+        assertThat(fizzBuzzSolution.fizzBuzz(20), is(nullValue()));
     }
 }
